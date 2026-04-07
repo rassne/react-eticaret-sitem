@@ -88,13 +88,35 @@ const Payment = () => {
       return;
     }
 
-    // Simulate payment
-    setOrderPlaced(true);
+    // Create new order
+    const newOrder = {
+      id: Date.now(),
+      items: cartItems,
+      total: getTotalPrice(),
+      date: new Date().toLocaleString('tr-TR'),
+      status: 'pending',
+      customer: {
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        address: formData.address
+      }
+    };
+
+    // Save to allOrders list for admin panel
+    const existingOrders = JSON.parse(localStorage.getItem('allOrders') || '[]');
+    existingOrders.unshift(newOrder);
+    localStorage.setItem('allOrders', JSON.stringify(existingOrders));
+
+    // Also save as lastOrder for user's order page
     localStorage.setItem('lastOrder', JSON.stringify({
       items: cartItems,
       total: getTotalPrice(),
       date: new Date().toLocaleString('tr-TR')
     }));
+
+    // Simulate payment
+    setOrderPlaced(true);
     clearCart();
 
     setTimeout(() => {

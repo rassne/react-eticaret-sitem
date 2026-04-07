@@ -15,6 +15,7 @@ import Orders from './pages/Orders';
 import Settings from './pages/Settings';
 import Admin from './pages/Admin';
 import AdminProducts from './pages/AdminProducts';
+import AdminOrders from './pages/AdminOrders';
 import { initializeProductsStorage } from './data/products';
 import './styles/globals.css';
 import './styles/navbar.css';
@@ -53,6 +54,7 @@ function AppContent() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/admin" element={<AdminRoute component={Admin} />} />
             <Route path="/admin/products" element={<AdminRoute component={AdminProducts} />} />
+            <Route path="/admin/orders" element={<AdminRoute component={AdminOrders} />} />
           </Routes>
         </main>
       </div>

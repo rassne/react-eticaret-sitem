@@ -96,7 +96,9 @@ const Admin = () => {
               <p style={{ color: 'var(--gray)', marginBottom: '1rem', fontSize: '0.9rem' }}>
                 Siparişleri görüntüleyin ve kargo durumunu güncelleyin
               </p>
-              <button style={{
+              <button 
+                onClick={() => navigate('/admin/orders')}
+                style={{
                 width: '100%',
                 padding: '0.6rem',
                 background: 'var(--text)',
