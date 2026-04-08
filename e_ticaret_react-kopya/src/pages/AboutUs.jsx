@@ -21,16 +21,16 @@ const AboutUs = () => {
 
           {/* Four Buttons Section */}
           <div className="about-buttons">
-            <button className="btn btn-primary about-btn">
+            <button type="button" className="btn btn-primary about-btn" aria-label="Misyonumuz hakkında bilgi">
               Misyonumuz
             </button>
-            <button className="btn btn-primary about-btn">
+            <button type="button" className="btn btn-primary about-btn" aria-label="Vizyonumuz hakkında bilgi">
               Vizyonumuz
             </button>
-            <button className="btn btn-primary about-btn">
+            <button type="button" className="btn btn-primary about-btn" aria-label="Ekibimiz hakkında bilgi">
               Ekibimiz
             </button>
-            <button className="btn btn-primary about-btn">
+            <button type="button" className="btn btn-primary about-btn" aria-label="İletişim bilgileri">
               İletişim
             </button>
           </div>
