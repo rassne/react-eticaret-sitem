@@ -90,7 +90,7 @@ const About = () => {
               <h2>Rakamlarla Biz</h2>
               <div className="stats-grid">
                 <div className="stat-item">
-                  <div className="stat-number">5+</div>
+                  <div className="stat-number">7+</div>
                   <div className="stat-label">Yıllık Deneyim</div>
                 </div>
                 <div className="stat-item">
