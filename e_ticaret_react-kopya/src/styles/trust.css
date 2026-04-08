@@ -1,0 +1,264 @@
+/* Trust Page Styles */
+
+.trust-page {
+  padding-top: 2rem;
+}
+
+.back-button {
+  padding: 0.5rem 1rem;
+  background: var(--gray);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  transition: all 0.2s;
+}
+
+.back-button:hover {
+  background: var(--text);
+}
+
+.trust-intro {
+  text-align: center;
+  color: var(--gray);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Trust Section */
+.trust-section {
+  margin-bottom: 3rem;
+}
+
+.trust-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.5rem;
+}
+
+.trust-section-title i {
+  color: var(--gold);
+}
+
+/* Reviews Grid */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.review-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+}
+
+.review-info {
+  flex: 1;
+}
+
+.review-name {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.star-filled {
+  color: #f39c12;
+}
+
+.star-empty {
+  color: #ddd;
+}
+
+.review-text {
+  font-style: italic;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.review-date {
+  font-size: 0.85rem;
+  color: var(--gray);
+  opacity: 0.7;
+}
+
+/* Collaborations Grid */
+.collaborations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.collaboration-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.collaboration-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--gold);
+}
+
+.collaboration-logo {
+  max-width: 120px;
+  max-height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.collaboration-name {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.collaboration-desc {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Awards Grid */
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.award-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s;
+}
+
+.award-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--gold);
+}
+
+.award-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.award-info {
+  flex: 1;
+}
+
+.award-year {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.award-title {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.award-desc {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Empty State */
+.trust-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--light-gray);
+  border-radius: 12px;
+  color: var(--gray);
+}
+
+.trust-empty i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.trust-empty p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .trust-intro {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .reviews-grid,
+  .collaborations-grid,
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .award-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .award-info {
+    text-align: center;
+  }
+}

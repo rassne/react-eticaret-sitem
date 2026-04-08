@@ -16,7 +16,10 @@ import Settings from './pages/Settings';
 import Admin from './pages/Admin';
 import AdminProducts from './pages/AdminProducts';
 import AdminOrders from './pages/AdminOrders';
+import AdminAbout from './pages/AdminAbout';
+import Trust from './pages/Trust';
 import { initializeProductsStorage } from './data/products';
+import { initializeTrustStorage } from './data/trustData';
 import './styles/globals.css';
 import './styles/navbar.css';
 import './styles/footer.css';
@@ -24,6 +27,8 @@ import './styles/slider.css';
 import './styles/product.css';
 import './styles/auth.css';
 import './styles/admin-products.css';
+import './styles/admin-about.css';
+import './styles/trust.css';
 
 // Admin paneline erişimi kontrol eden bileşen
 function AdminRoute({ component: Component }) {
@@ -32,9 +37,10 @@ function AdminRoute({ component: Component }) {
 }
 
 function AppContent() {
-  // Initialize products storage on app load
+  // Initialize products and trust storage on app load
   useEffect(() => {
     initializeProductsStorage();
+    initializeTrustStorage();
   }, []);
 
   return (
@@ -55,6 +61,8 @@ function AppContent() {
             <Route path="/admin" element={<AdminRoute component={Admin} />} />
             <Route path="/admin/products" element={<AdminRoute component={AdminProducts} />} />
             <Route path="/admin/orders" element={<AdminRoute component={AdminOrders} />} />
+            <Route path="/admin/about" element={<AdminRoute component={AdminAbout} />} />
+            <Route path="/trust" element={<Trust />} />
           </Routes>
         </main>
       </div>

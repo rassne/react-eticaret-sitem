@@ -174,6 +174,40 @@ const Admin = () => {
                 Görüntüle
               </button>
             </div>
+
+            <div style={{
+              background: 'var(--white)',
+              border: '1px solid var(--border)',
+              borderRadius: '8px',
+              padding: '2rem',
+              textAlign: 'center',
+              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)'
+            }}>
+              <div style={{
+                fontSize: '2.5rem',
+                color: 'var(--gold)',
+                marginBottom: '1rem'
+              }}>
+                <i className="fas fa-shield-alt"></i>
+              </div>
+              <h3 style={{ marginBottom: '0.5rem' }}>Hakkımızda Yönet</h3>
+              <p style={{ color: 'var(--gray)', marginBottom: '1rem', fontSize: '0.9rem' }}>
+                Müşteri yorumları, iş birlikleri ve ödülleri yönetin
+              </p>
+              <button 
+                onClick={() => navigate('/admin/about')}
+                style={{
+                width: '100%',
+                padding: '0.6rem',
+                background: 'var(--text)',
+                color: 'var(--white)',
+                border: 'none',
+                borderRadius: '6px',
+                cursor: 'pointer'
+              }}>
+                Yönet
+              </button>
+            </div>
           </div>
 
           <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
