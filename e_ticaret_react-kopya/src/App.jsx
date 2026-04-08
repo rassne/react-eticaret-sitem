@@ -15,6 +15,7 @@ import Orders from './pages/Orders';
 import Settings from './pages/Settings';
 import Admin from './pages/Admin';
 import AdminProducts from './pages/AdminProducts';
+import AboutUs from './pages/AboutUs';
 import { initializeProductsStorage } from './data/products';
 import './styles/globals.css';
 import './styles/navbar.css';
@@ -51,6 +52,7 @@ function AppContent() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/about" element={<AboutUs />} />
             <Route path="/admin" element={<AdminRoute component={Admin} />} />
             <Route path="/admin/products" element={<AdminRoute component={AdminProducts} />} />
           </Routes>

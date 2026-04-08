@@ -1,0 +1,74 @@
+/* About Us Page Styles */
+
+.about-section {
+  padding: 4rem 1rem;
+  min-height: 60vh;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.about-text-placeholder {
+  background: var(--white);
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-text {
+  color: var(--gray);
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.about-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.about-btn {
+  min-width: 160px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-transform: none;
+}
+
+.about-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-text-placeholder {
+    padding: 2rem 1rem;
+    min-height: 150px;
+  }
+
+  .about-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .about-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
