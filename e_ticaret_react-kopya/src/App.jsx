@@ -15,6 +15,7 @@ import Orders from './pages/Orders';
 import Settings from './pages/Settings';
 import Admin from './pages/Admin';
 import AdminProducts from './pages/AdminProducts';
+import About from './pages/About';
 import { initializeProductsStorage } from './data/products';
 import './styles/globals.css';
 import './styles/navbar.css';
@@ -23,6 +24,7 @@ import './styles/slider.css';
 import './styles/product.css';
 import './styles/auth.css';
 import './styles/admin-products.css';
+import './styles/about.css';
 
 // Admin paneline erişimi kontrol eden bileşen
 function AdminRoute({ component: Component }) {
@@ -53,6 +55,7 @@ function AppContent() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/admin" element={<AdminRoute component={Admin} />} />
             <Route path="/admin/products" element={<AdminRoute component={AdminProducts} />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
       </div>

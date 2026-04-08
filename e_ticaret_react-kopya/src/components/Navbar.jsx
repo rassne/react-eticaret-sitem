@@ -75,6 +75,10 @@ const Navbar = () => {
         <Link to="/cart" className="nav-link">
           Sepet
         </Link>
+
+        <Link to="/about" className="nav-link">
+          Hakkımızda
+        </Link>
       </div>
 
       <div className="navbar-right">
