@@ -18,6 +18,7 @@ import AdminProducts from './pages/AdminProducts';
 import AdminOrders from './pages/AdminOrders';
 import AdminAbout from './pages/AdminAbout';
 import Trust from './pages/Trust';
+import Commitments from './pages/Commitments';
 import { initializeProductsStorage } from './data/products';
 import { initializeTrustStorage } from './data/trustData';
 import './styles/globals.css';
@@ -29,6 +30,7 @@ import './styles/auth.css';
 import './styles/admin-products.css';
 import './styles/admin-about.css';
 import './styles/trust.css';
+import './styles/commitments.css';
 
 // Admin paneline erişimi kontrol eden bileşen
 function AdminRoute({ component: Component }) {
@@ -63,6 +65,7 @@ function AppContent() {
             <Route path="/admin/orders" element={<AdminRoute component={AdminOrders} />} />
             <Route path="/admin/about" element={<AdminRoute component={AdminAbout} />} />
             <Route path="/trust" element={<Trust />} />
+            <Route path="/commitments" element={<Commitments />} />
           </Routes>
         </main>
       </div>

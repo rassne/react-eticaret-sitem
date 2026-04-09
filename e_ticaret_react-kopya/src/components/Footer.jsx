@@ -16,6 +16,9 @@ const Footer = () => {
           <Link to="/trust" className="footer-link">
             <i className="fas fa-shield-alt"></i> Güven Rozetleri
           </Link>
+          <Link to="/commitments" className="footer-link">
+            <i className="fas fa-handshake"></i> Taahhütlerimiz
+          </Link>
         </div>
       </div>
       

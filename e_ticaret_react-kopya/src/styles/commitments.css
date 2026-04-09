@@ -1,0 +1,155 @@
+/* Commitments Page Styles */
+
+.commitments-page {
+  padding-top: 2rem;
+}
+
+.commitments-intro {
+  text-align: center;
+  color: var(--gray);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Commitments Grid */
+.commitments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.commitment-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.commitment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  border-color: var(--gold);
+}
+
+.commitment-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--gold), #e6c865);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.commitment-icon i {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.commitment-title {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.commitment-description {
+  color: var(--gray);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* CTA Section */
+.commitments-cta {
+  background: linear-gradient(135deg, var(--text), #2c2c2c);
+  color: var(--white);
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.commitments-cta h2 {
+  font-size: 1.75rem;
+  margin: 0 0 1rem;
+  color: var(--gold);
+}
+
+.commitments-cta p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0 0 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background: var(--gold);
+  color: var(--text);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.cta-button i {
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .commitments-intro {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .commitments-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .commitment-card {
+    padding: 1.5rem;
+  }
+
+  .commitment-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .commitment-icon i {
+    font-size: 1.75rem;
+  }
+
+  .commitments-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  .commitments-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .commitments-cta p {
+    font-size: 1rem;
+  }
+}
