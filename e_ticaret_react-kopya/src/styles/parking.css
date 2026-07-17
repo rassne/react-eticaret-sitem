@@ -1,0 +1,30 @@
+.parking-navbar { display:flex; justify-content:space-between; align-items:center; padding:1rem max(1rem, calc((100% - 1200px)/2)); background:#102a43; color:#fff; gap:1rem; }
+.parking-navbar a { color:#dce8f2; margin-left:1.25rem; font-weight:600; }
+.parking-navbar a.active, .parking-navbar a:hover { color:#fff; border-bottom:2px solid #54d2d2; }
+.parking-brand { color:#fff !important; font-size:1.15rem; letter-spacing:.05em; margin-left:0 !important; }
+.parking-page { max-width:1100px; }
+.page-heading { display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem; }
+.page-heading h1 { font-size:2.2rem; }
+.eyebrow { color:#257f82; font-size:.75rem; letter-spacing:.12em; font-weight:700; }
+.camera-status { background:#e1f7ed; color:#177245; padding:.4rem .7rem; border-radius:99px; font-size:.85rem; }
+.metric-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; margin-bottom:1.5rem; }
+.metric, .parking-card { background:#fff; border:1px solid var(--border); border-radius:10px; padding:1.5rem; }
+.metric span, .parking-card small { display:block; color:var(--gray); }
+.metric strong { display:block; margin-top:.25rem; font-size:2rem; color:#102a43; }
+.dashboard-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:1.5rem; }
+.parking-card h2 { font-size:1.35rem; margin-bottom:.4rem; }
+.parking-card p { color:#555; margin-bottom:1rem; }
+.reading-form label, .tariff-form label { display:block; font-weight:600; margin:1rem 0 .35rem; }
+.reading-form input, .tariff-form input { width:100%; border:1px solid var(--border); border-radius:6px; padding:.65rem; }
+.reading-form .btn, .tariff-form .btn { margin-top:1.25rem; }
+.direction-toggle { display:flex; gap:.5rem; }
+.direction-toggle button { border:1px solid var(--border); border-radius:6px; padding:.5rem 1rem; background:#fff; }
+.direction-toggle .selected { color:#fff; background:#102a43; }
+.notice { background:#e1f7ed; color:#177245 !important; padding:.6rem; border-radius:5px; margin-top:1rem; }
+.camera-row, .review-row { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 0; border-bottom:1px solid var(--border); }
+.camera-dot { color:#1aae69; } .camera-row > span:last-child { color:#177245; font-size:.85rem; }
+.parking-card hr { border:0; border-top:1px solid var(--border); margin:1.2rem 0; }
+.table-wrap { overflow-x:auto; margin-bottom:1.5rem; } table { border-collapse:collapse; width:100%; } th,td { text-align:left; padding:.8rem; border-bottom:1px solid var(--border); white-space:nowrap; } th { color:var(--gray); font-size:.8rem; }
+.pill { padding:.2rem .55rem; border-radius:99px; font-size:.8rem; font-weight:600; } .pill.active { background:#e0f1ff; color:#146b9b; } .pill.paid { background:#e1f7ed; color:#177245; }
+.text-button { background:transparent; color:#146b9b; font-weight:600; } .review-row .btn + .btn { margin-left:.5rem; } .privacy { max-width:800px; margin:auto; } .privacy h1 { margin:.3rem 0 1.5rem; } .privacy h2 { margin-top:1.5rem; }
+@media (max-width:700px) { .parking-navbar, .page-heading { align-items:flex-start; flex-direction:column; } .parking-navbar a { margin:0 .6rem 0 0; font-size:.85rem; } .metric-grid, .dashboard-grid { grid-template-columns:1fr; } }

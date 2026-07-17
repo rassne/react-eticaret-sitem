@@ -1,58 +1,24 @@
-import React, { useContext, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { UserProvider } from './context/UserContext';
-import { AuthProvider, AuthContext } from './context/AuthContext';
-import { CartProvider } from './context/CartContext';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Products from './pages/Products';
-import ProductDetail from './pages/ProductDetail';
-import Login from './pages/Login';
-import Cart from './pages/Cart';
-import Payment from './pages/Payment';
-import Profile from './pages/Profile';
-import Orders from './pages/Orders';
-import Settings from './pages/Settings';
-import Admin from './pages/Admin';
-import AdminProducts from './pages/AdminProducts';
-import { initializeProductsStorage } from './data/products';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ParkingProvider } from './context/ParkingContext';
+import ParkingNavbar from './components/ParkingNavbar';
+import ParkingDashboard from './pages/ParkingDashboard';
+import ParkingOperations from './pages/ParkingOperations';
+import Tariffs from './pages/Tariffs';
+import Privacy from './pages/Privacy';
 import './styles/globals.css';
-import './styles/navbar.css';
-import './styles/footer.css';
-import './styles/slider.css';
-import './styles/product.css';
-import './styles/auth.css';
-import './styles/admin-products.css';
-
-// Admin paneline erişimi kontrol eden bileşen
-function AdminRoute({ component: Component }) {
-  const { isAdmin } = useContext(AuthContext);
-  return isAdmin ? <Component /> : <Navigate to="/login" replace />;
-}
+import './styles/parking.css';
 
 function AppContent() {
-  // Initialize products storage on app load
-  useEffect(() => {
-    initializeProductsStorage();
-  }, []);
-
   return (
     <Router>
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-        <Navbar />
+        <ParkingNavbar />
         <main style={{ flex: 1 }}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/product/:id" element={<ProductDetail />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/payment" element={<Payment />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/orders" element={<Orders />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/admin" element={<AdminRoute component={Admin} />} />
-            <Route path="/admin/products" element={<AdminRoute component={AdminProducts} />} />
+            <Route path="/" element={<ParkingDashboard />} />
+            <Route path="/operations" element={<ParkingOperations />} />
+            <Route path="/tariffs" element={<Tariffs />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </main>
       </div>
@@ -62,13 +28,7 @@ function AppContent() {
 
 function App() {
   return (
-    <AuthProvider>
-      <UserProvider>
-        <CartProvider>
-          <AppContent />
-        </CartProvider>
-      </UserProvider>
-    </AuthProvider>
+    <ParkingProvider><AppContent /></ParkingProvider>
   );
 }
 
