@@ -32,7 +32,8 @@ const initialState = () => ({
   tariff: DEFAULT_TARIFF
 });
 
-const identifier = () => globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`;
+let fallbackId = 0;
+const identifier = () => globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${++fallbackId}`;
 const audit = (state, action, details) => ({
   ...state,
   auditLog: [{ id: identifier(), action, details, occurredAt: new Date().toISOString() }, ...state.auditLog]
